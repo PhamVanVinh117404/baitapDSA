@@ -154,19 +154,19 @@ int main(){
 	    scanf("%d", &chon);
 	    switch(chon){
 	        case 1: 
-	            printf("Nhap so thông tin sv can them\n");
+	            printf("Nhap so thÃ´ng tin sv can them\n");
 	            nhap(&x);
 	            if(x.masv > 0) 
                 	insert_Head(&L, x);
             	break;
             case 2:	
-	            printf("Nhap so thông tin sv can them\n");
+	            printf("Nhap so thÃ´ng tin sv can them\n");
 	            nhap(&x);
 	            if(x.masv > 0) 
                 	insert_Tail(&L, x);
             	break;
             case 3:
-	            printf("Nhap so thông tin sv can them\n");
+	            printf("Nhap so thÃ´ng tin sv can them\n");
                 nhap(&x);
                 int n;
                 printf("Nhap vi tri can them vao sau: ");

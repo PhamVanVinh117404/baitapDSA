@@ -139,6 +139,20 @@ void del_Id(LList *L, int Masv){
 	else if(pp==L->pHead) del_Head(L);
 	else del_After(L,q);
 }
+void tach(LList L, LList *L1, LList *L2){
+    initList(L1);
+    initList(L2);
+    Node *pp = L.pHead;
+    while(pp != NULL){
+        if(pp->infor.d1 < 4 || pp->infor.d2 < 4 ||pp->infor.d3 < 4 ){
+            insert_Head(L1,pp->infor);
+        }
+        else{
+            insert_Head(L2,pp->infor);
+        }
+        pp = pp->link;
+    }
+}
 void nhap(Data *x){
     printf("Nhap ma sv: ");
     scanf("%d", &(x->masv));
@@ -180,6 +194,7 @@ int main(){
 	    printf("\n5: Xoa nut dau")
 		printf("\n6:Xoa nut cuoi")
 		printf("\n7:Xoa nut") 
+        printf("\n8:Tach da sach") 
 	    printf("\n9: Duyet ds");
 	    printf("\n0: Thoat");
 	    printf("\nMoi ban chon: ");
@@ -232,22 +247,24 @@ int main(){
 				del_Tail(&L); 
 				break;
 			case 7:
-			printf("Chon du lieu can xoa voi 71 la tim ma, 72 la tim ten: ");
+			    printf("Chon du lieu can xoa voi 71 la tim ma, 72 la tim ten: ");
             	int xoa;
 				switch(xoa):
-				case 71:
-				    printf("Nhap ma sv: ");
-					int ma;
-					scanf("%d",&ma);
-					del_Id(L,ma);
-					break;
-				case 72:
-				    printf("Nhap ten: ");
-					char ten[30];
-					scanf("%s",ten);
-					searchName(L,ten);
-					break;
-				break;
+                    case 71:
+                        printf("Nhap ma sv: ");
+                        int ma;
+                        scanf("%d",&ma);
+                        del_Id(L,ma);
+                        break;
+                    case 72:
+                        printf("Nhap ten: ");
+                        char ten[30];
+                        scanf("%s",ten);
+                        searchName(L,ten);
+                        break;
+                    break;
+            case 8:
+                break;
             case 9: 
                 processList(L);
                 break;    

@@ -106,7 +106,39 @@ void del_Tail(LList *L){
 		L->spt--;
 		if(L->pHead==NULL) L->pTail==NULL; 
 	} 
-} 
+}
+void del_After(LList ^L, Node *q){
+	Node *pp;
+	if(q==NULL) return;
+	else{
+		pp = q->link;
+		if(q->link = L->pTail)
+			L->pTail = q;
+		q->link = pp->link;
+		free(pp);
+		l->spt--;
+	}
+}
+void del_Name(LList *L, char name[30]){
+	Node *pp = L->pHead, *q;
+	while(pp!=NULL && !strstr(pp->infor.hoten,name)){
+		q=pp;
+		pp=pp->link;
+	}
+	if(pp==NULL) return;
+	else if(pp==L->pHead) del_Head(L);
+	else del_After(L,q);
+}
+void del_Id(LList *L, int Masv){
+	Node *pp = L->pHead, *q;
+	while(pp!=NULL && !pp->infor.masv!=Masv){
+		q=pp;
+		pp=pp->link;
+	}
+	if(pp==NULL) return;
+	else if(pp==L->pHead) del_Head(L);
+	else del_After(L,q);
+}
 void nhap(Data *x){
     printf("Nhap ma sv: ");
     scanf("%d", &(x->masv));
@@ -146,7 +178,8 @@ int main(){
 	    printf("\n3: Them nut vao sau mot nut khac trong danh sach");
 	    printf("\n4: Tim du lieu");
 	    printf("\n5: Xoa nut dau")
-		printf("\n6:Xoa nut cuoi") 
+		printf("\n6:Xoa nut cuoi")
+		printf("\n7:Xoa nut") 
 	    printf("\n9: Duyet ds");
 	    printf("\n0: Thoat");
 	    printf("\nMoi ban chon: ");
@@ -181,6 +214,7 @@ int main(){
 					case 41:
 					printf("Nhap ma sv: ");
 					int ma;
+					scanf("%d",&ma);
 					searchId(L,ma);
 					break;
 					case 42:
@@ -196,7 +230,24 @@ int main(){
 				break;
 			case 6:
 				del_Tail(&L); 
-				break;  
+				break;
+			case 7:
+			printf("Chon du lieu can xoa voi 71 la tim ma, 72 la tim ten: ");
+            	int xoa;
+				switch(xoa):
+				case 71:
+				    printf("Nhap ma sv: ");
+					int ma;
+					scanf("%d",&ma);
+					del_Id(L,ma);
+					break;
+				case 72:
+				    printf("Nhap ten: ");
+					char ten[30];
+					scanf("%s",ten);
+					searchName(L,ten);
+					break;
+				break;
             case 9: 
                 processList(L);
                 break;    

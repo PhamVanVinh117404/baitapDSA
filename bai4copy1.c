@@ -202,13 +202,13 @@ int main(){
 	    scanf("%d", &chon);
 	    switch(chon){
 	        case 1: 
-	            printf("Nhap so thông tin sv can them\n");
+	            printf("Nhap thong tin sv can them vao danh sach\n\n");
 	            nhap(&x);
 	            if(x.masv > 0) 
                 	insert_Head(&L, x);
             	break;
             case 2:	
-	            printf("Nhap so thông tin sv can them\n");
+	            printf("Nhap thong tin sv can them vao danh sach\n\n");
 	            nhap(&x);
 	            if(x.masv > 0) 
                 	insert_Tail(&L, x);

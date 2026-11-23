@@ -191,10 +191,10 @@ int main(){
 	    printf("\n2: Them nut vao cuoi danh sach");
 	    printf("\n3: Them nut vao sau mot nut khac trong danh sach");
 	    printf("\n4: Tim du lieu");
-	    printf("\n5: Xoa nut dau")
-		printf("\n6:Xoa nut cuoi")
-		printf("\n7:Xoa nut") 
-        printf("\n8:Tach da sach") 
+	    printf("\n5: Xoa nut dau");
+		printf("\n6:Xoa nut cuoi");
+		printf("\n7:Xoa nut"); 
+        printf("\n8:Tach da sach");
 	    printf("\n9: Duyet ds");
 	    printf("\n0: Thoat");
 	    printf("\nMoi ban chon: ");

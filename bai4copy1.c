@@ -157,7 +157,7 @@ void nhap(Data *x){
     printf("Nhap ma sv: ");
     scanf("%d", &(x->masv));
     if(x->masv > 0){
-        printf("Nhap ma sv: ");
+        printf("Nhap ten sv: ");
         scanf("%s", (x->hoten));
         printf("Nhap diem mon 1: ");
         scanf("%f", &(x->d1));
